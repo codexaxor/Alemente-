@@ -66,7 +66,9 @@ if (isset($_POST['update_password'])) {
 </head>
 <body>
 	<!--Navbar-->
-	<?php include 'navbar.php'; ?>
+
+<!--	<?php //include 'navbar.php'; ?> -->
+
 	<!--information Display-->
 	<?php  
 		if ($row_number>0) {

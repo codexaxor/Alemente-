@@ -1,8 +1,6 @@
 <?php 
 include 'connection.php';
-
-
-
+//session_start();  -- already continued
 
 if (isset($_POST['Login'])) {
 
@@ -20,6 +18,8 @@ $sql="select * from user_info where email='$email' AND password='$password'";
 
 $command= mysqli_query($connection,$sql);
 $row_number=mysqli_num_rows($command);
+
+
 if ($row_number > 0 && $_SESSION['login_status']!=1 ) {
 	echo "Login Successful";
 	$_SESSION['login_status']=1;
@@ -33,24 +33,26 @@ if ($row_number > 0 && $_SESSION['login_status']!=1 ) {
 }
 
 }
-if (isset($_POST['submit'])) {
+
+
+// if (isset($_POST['submit'])) {
 	
-	$_SESSION['name']= $_POST['name_input'];
-	$_SESSION['phone_no']= $_POST['phone_input'];
-	$_SESSION['address']= $_POST['address_input'];
-	$_SESSION['gender']= $_POST['gender_input'];
-	$_SESSION['email']= $_POST['email_input'];
-	$_SESSION['password']= $_POST['password_input'];
+// 	$_SESSION['name']= $_POST['name_input'];
+// 	$_SESSION['phone_no']= $_POST['phone_input'];
+// 	$_SESSION['address']= $_POST['address_input'];
+// 	$_SESSION['gender']= $_POST['gender_input'];
+// 	$_SESSION['email']= $_POST['email_input'];
+// 	$_SESSION['password']= $_POST['password_input'];
 
-	header('Location: info_display.php');
+// 	header('Location: info_display.php');
 
-	}
+// 	}
 
-if (isset($_POST['Logout']) ) {
-	unset($_SESSION['user_details']);
-	$_SESSION['login_status']=0;
-	header('Location: index.php');
-}
+// if (isset($_POST['Logout']) ) {
+// 	unset($_SESSION['user_details']);
+// 	$_SESSION['login_status']=0;
+// 	header('Location: index.php');
+// }
 	
 ?>
 <!DOCTYPE html>

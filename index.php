@@ -179,6 +179,8 @@ if (isset($_POST['submit'])) {
 </nav>
 
 
+			<!-- sliding image -->
+
 
 	<div class="slider">
 		<figure>
@@ -209,6 +211,7 @@ if (isset($_POST['submit'])) {
 
 	
 </div>
+
 <div class="container menu_div">
 	<div class="row">
 
@@ -218,7 +221,7 @@ if (isset($_POST['submit'])) {
 				<div class="row">
 
 					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/veg.png" class="img-responsive">
+						<img src="images/v1.jpg" class="img-responsive">
 
 
 					</div>
@@ -614,3 +617,7 @@ if (isset($_POST['submit'])) {
 
 
 </html>
+
+
+
+
