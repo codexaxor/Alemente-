@@ -7,15 +7,19 @@ session_start();
 if (isset($_POST['Login'])) {
 
 $email= $_POST['email_input'];
-$password= md5($_POST['password_input']);
-echo $password;
-$admin_detail=array($email,$password);
-$_SESSION['admin_details']=$admin_detail;
+$password= $_POST['password_input'];
+//echo $password;
+//$admin_detail=array($email,$password);
+//$_SESSION['admin_details']=$admin_detail;
 
-$sql="select * from admin_info where email='$admin_detail[0]' AND password='$admin_detail[1]'";
+//$sql="select * from admin_info where email='$admin_detail[0]' AND password='$admin_detail[1]'";
+$sql="select * from admin_info where email='$email' AND password='$password'";
+
+
 $command= mysqli_query($connection,$sql);
 $row_number=mysqli_num_rows($command);
-if ($row_number==1 && $_SESSION['admin_login_status']!=1 ) {
+
+if ($row_number > 0 && $_SESSION['admin_login_status']!=1 ) {
     echo "Login Successful";
     $_SESSION['admin_login_status']=1;
     header('Location: admin_function.php');

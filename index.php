@@ -458,12 +458,6 @@ if (isset($_POST['submit'])) {
 										</div>
 
 									</div>
-
-
-
-
-
-
 									
 									<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 
@@ -499,19 +493,10 @@ if (isset($_POST['submit'])) {
 </center>
 
 
-	<div class="container">
+<div class="container">
 		<?php 
 	
-	
-	
-	
-	
-	
 		$query = "select * from item_information where hot_item=1 order by Id ASC" ;
-	
-	
-	
-	
 	
 
 	$command= mysqli_query($connection,$query);
@@ -566,19 +551,8 @@ if (isset($_POST['submit'])) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
+
 <div class="footer-body">
 		<div class="footer-start">
 			<div class="row">
@@ -611,14 +585,20 @@ if (isset($_POST['submit'])) {
 
 			</div>
 			<div class="row">
-				<div class="col-lg-2">
+				<div class="col-lg-3">
 					<p><B>Follow us:</B></p>
 					
 				</div>
-				<div class="col-md-3 icon">
+				<div class="col-lg-3 icon">
 					<a href="#"><i class="fab fa-facebook-f"></i></a>
 					<a href="#"><i class="fab fa-instagram"></i></a>
-									
+					<a href="#"><i class="fab fa-linkedin"></i></a>
+					<a href="#"><i class="fab fa-google-plus-g"></i></a>
+					
+					
+					
+					
+					
 				</div>
 				
 			</div>
@@ -630,4 +610,7 @@ if (isset($_POST['submit'])) {
 		</div>
 		
 	</div>
+
+
+
 </html>

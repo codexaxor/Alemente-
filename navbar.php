@@ -7,17 +7,20 @@ include 'connection.php';
 if (isset($_POST['Login'])) {
 
 $email= $_POST['email_input'];
-$password= md5($_POST['password_input']);
-$user_detail=array($email,$password);
-$_SESSION['user_details']=$user_detail;
+$password= $_POST['password_input'];
 
+//$user_detail=array($email,$password);
+//$_SESSION['user_details']=$user_detail;
+
+//print_r(user_detail[0]);
 
 //$sql="select * from user_info where email='$user_detail[0]' AND password='$user_detail[1]'";
 
 $sql="select * from user_info where email='$email' AND password='$password'";
+
 $command= mysqli_query($connection,$sql);
 $row_number=mysqli_num_rows($command);
-if ($row_number==1 && $_SESSION['login_status']!=1 ) {
+if ($row_number > 0 && $_SESSION['login_status']!=1 ) {
 	echo "Login Successful";
 	$_SESSION['login_status']=1;
 	header('Location: personal_info.php');
@@ -43,13 +46,13 @@ if (isset($_POST['submit'])) {
 
 	}
 
-	if (isset($_POST['Logout']) ) {
+if (isset($_POST['Logout']) ) {
 	unset($_SESSION['user_details']);
 	$_SESSION['login_status']=0;
 	header('Location: index.php');
 }
 	
-	 ?>
+?>
 <!DOCTYPE html>
 <html>
 <head>

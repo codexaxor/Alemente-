@@ -2,7 +2,7 @@
 include 'connection.php';
 session_start();
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -27,15 +27,11 @@ session_start();
 	
 </head>
 <body>
+
 	<?php include 'navbar.php'; ?>
 
 	<center><h2>Your Information</h2></center>
 	<?php 
-
-
-
-	
-	
 
 	if (isset($_POST['Confirm'])) {
 
@@ -66,14 +62,8 @@ session_start();
 			$_SESSION['login_status']=1;
 			$user_detail=array($email,$password);
 			$_SESSION['user_details']=$user_detail;
-			header('Location: personal_info.php');
+			header('Location: personal_info.php');   /// redirection after Creating Account
 		}
-
-
-
-
-
-
 	}
 	else{
 		$name= $_SESSION['name'];
@@ -148,10 +138,5 @@ session_start();
 
 	</form>
 
-	
-
-
-	
-	
 </body>
 </html>
