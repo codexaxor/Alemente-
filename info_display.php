@@ -105,7 +105,9 @@ session_start();
 			<tr>
 
 				<td>Gender</td>
-				<td><?php 
+				<td>
+				<?php 
+				
 				if ($gender==1) {
 					echo " Male";
 				}

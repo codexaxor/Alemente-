@@ -2,10 +2,15 @@
 error_reporting(0);
 include 'connection.php';
 session_start();
+
+include 'navbar.php';
+
 $user_detail=$_SESSION['user_details'];
 $sql="select * from user_info where email='$user_detail[0]' AND password='$user_detail[1]'";
 $command= mysqli_query($connection,$sql);
 $row_number=mysqli_num_rows($command);
+
+
 
 if (isset($_POST['Logout']) ) {
 	unset($_SESSION['user_details']);
@@ -24,6 +29,31 @@ if (isset($_POST['update_password'])) {
 			echo 'alert("Updated")';
 			echo '</script>';
 			$sql="select * from user_info where email='$email' AND password='$password'";
+			$command= mysqli_query($connection,$sql);
+			$row_number=mysqli_num_rows($command);
+
+			
+		}
+		else{
+			echo '<script language="javascript">';
+			echo 'alert("Failed")';
+			echo '</script>';
+		}
+
+}
+
+
+if (isset($_POST['update_contact'])) {
+	$email=$_POST['email_input'];
+	$contact=$_POST['new_contact'];
+	$query="update user_info set phone_no='$contact' where email='$email'" ;
+	$command= mysqli_query($connection,$query);
+		if (mysqli_query($connection,$query)) {
+			
+			echo '<script language="javascript">';
+			echo 'alert("Updated")';
+			echo '</script>';
+			$sql="select * from user_info where email='$email' AND phone_no='$contact'";
 			$command= mysqli_query($connection,$sql);
 			$row_number=mysqli_num_rows($command);
 
@@ -87,11 +117,7 @@ if (isset($_POST['update_password'])) {
 							<h2 class="item-price">E-mail: <?php echo $user['email'] ?></h2>
 							
 							
-						</div>
-						
-					
-					
-					
+						</div>			
 				</div>
 					<?php
 			}
@@ -102,7 +128,7 @@ if (isset($_POST['update_password'])) {
 			<!--Update password-->
 
 	
-		<div class="col-lg-6">
+		<div class="col-md-6">
 
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update Password</button>
 			<div class="modal fade" id="myModal" role="dialog">
@@ -170,23 +196,76 @@ if (isset($_POST['update_password'])) {
 										</div>
 									</div>
 
-								
-
-
-
-
-
-
-
-
 									<center>
 										<button type="submit" name="update_password" class="btn btn-primary">Submit</button>
 									</center>
-									
+							</form>
+						</div>
 
-							
+					</div>
+
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<div class="col-md-6">
+		
+		<!-- update contact -->
+			
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update Contact Number</button>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="container">
+							<div class="row">
+
+								<div class="col-lg-12">
+									<div class="modal-header">
+										<h4 class="modal-title">Update Contact Number</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+			
+						<div class="modal-body">
+							<form method="post"  >
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<label for="EmailInput">Email address</label>
+												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email
+												" name="email_input">
+												<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+											</div>
 
 
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<label for="PhoneNoInput">New Contact Number</label>
+												<input type="text" class="form-control" id="new_contact" name="new_contact">
+
+											</div>
+
+
+										</div>
+									</div>
+
+									<center>
+										<button type="submit" name="update_contact" class="btn btn-primary">Submit</button>
+									</center>
 							</form>
 						</div>
 
@@ -199,19 +278,6 @@ if (isset($_POST['update_password'])) {
 
 
 
-
-
-
-
-
-
-
-</div>
-
-
-
-	
-	
 
 
 </body>
