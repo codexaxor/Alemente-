@@ -191,7 +191,7 @@ if (isset($_POST['submit'])) {
 
 			</div>
 			<div class="slide s2">
-				<img src="images/slider2.jpg" class="img-fluid" alt="Responsive image">
+				<img src="images/slider1.jpg" class="img-fluid" alt="Responsive image">
 
 
 			</div>
