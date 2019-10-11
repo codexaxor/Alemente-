@@ -227,12 +227,9 @@ if (isset($_POST['update_contact'])) {
 									<div class="modal-header">
 										<h4 class="modal-title">Update Contact Number</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-
 									</div>
-
 								</div>
 							</div>
-
 						</div>
 			
 						<div class="modal-body">
@@ -246,8 +243,6 @@ if (isset($_POST['update_contact'])) {
 												" name="email_input">
 												<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 											</div>
-
-
 										</div>
 									</div>
 

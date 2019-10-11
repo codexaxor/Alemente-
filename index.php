@@ -95,9 +95,6 @@ if (isset($_POST['submit'])) {
 	 ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -485,9 +482,6 @@ if (isset($_POST['submit'])) {
 
 
 
-
-
-
 </div>
 <center> 
 <h1 class="fire"> <i class="fas fa-fire"></i> HOT DEALS <i class="fas fa-fire"></i></h1>
@@ -533,12 +527,6 @@ if (isset($_POST['submit'])) {
 					
 					
 				</div>
-				
-				
-				
-				
-
-
 
 				<?php
 			}
@@ -557,28 +545,24 @@ if (isset($_POST['submit'])) {
 </body>
 
 <div class="footer-body">
+
 		<div class="footer-start">
+		
 			<div class="row">
 
-				<div class="col-lg-3">
-					<p><b>Chal Dal Dot Com</b></p>
-					<p>2019</p>
-					
-				</div>
-				<div class="col-lg-3">
-					<p><strong><b>Home</b></strong></p>
-					<p><span><b>About US</b></span></p>
-					<p><b>Projects</b></p>
+				<div class="col-lg-4">
+					<p><b>ALIMENTE</b></p>
+					<p>&copy;2019</p>
 					
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 					<p><strong><b>Visit</b></strong></p>
 					<p>141 & 142, Love Road, Tejgaon Industrial Area, Dhaka-1208</p>
 					
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 					<p><strong><b>Legal</b></strong></p>
 					<p>Terms</p>
 					<p>Privacy</p>
@@ -587,21 +571,17 @@ if (isset($_POST['submit'])) {
 				
 
 			</div>
+			
 			<div class="row">
-				<div class="col-lg-3">
-					<p><B>Follow us:</B></p>
-					
-				</div>
-				<div class="col-lg-3 icon">
+				<div class="col-lg-4">
+					<B>Follow us : </B>
+				
+		<!--		<div class="col-lg-6 icon">  -->
+		
+		
 					<a href="#"><i class="fab fa-facebook-f"></i></a>
 					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-linkedin"></i></a>
-					<a href="#"><i class="fab fa-google-plus-g"></i></a>
-					
-					
-					
-					
-					
+			
 				</div>
 				
 			</div>
@@ -612,7 +592,7 @@ if (isset($_POST['submit'])) {
 			
 		</div>
 		
-	</div>
+</div>
 
 
 

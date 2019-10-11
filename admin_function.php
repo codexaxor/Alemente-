@@ -1,24 +1,24 @@
 <?php 
 session_start();
-if ($_SESSION['admin_login_status']==1) {
+
+
+
+if ($_SESSION['admin_login_status'] == 1) {
 include 'connection.php';
   
   if (isset($_POST['submit_delete'])) {
 			$id=$_POST['id_input'];
 			
-
 			$query= "DELETE FROM item_information WHERE id=$id" ; 
 			$command= mysqli_query($connection,$query);
 			if (mysqli_query($connection,$query)) {
 				echo "Deleted";
-				header('Location:admin_function.php');
-				
+				header('Location:admin_function.php');				
 			}
 			else{
 				echo "failed";
 			}
 		}
-
 
 		//for display item in table 
 
@@ -37,8 +37,6 @@ include 'connection.php';
 
 		//display start
 
-		
-
 	//new user 
 	if (isset($_POST['submit'])) {
 	
@@ -47,7 +45,7 @@ include 'connection.php';
 	$_SESSION['address']= $_POST['address_input'];
 	$_SESSION['gender']= $_POST['gender_input'];
 	$_SESSION['email']= $_POST['email_input'];
-	$_SESSION['password']= md5($_POST['password_input']);
+	$_SESSION['password']= ($_POST['password_input']);
 
 	header('Location: info_display _admin.php');
 
@@ -65,6 +63,8 @@ else{
 
 
  ?>
+ 
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,10 +83,15 @@ else{
 
 	<link rel="stylesheet" type="text/css" href="css/admin_function.css">
 </head>
+
+
+
 <body>
 	<!--Navbar-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-	<a class="navbar-brand" href="admin_function.php">ChalDalDotCom</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+	<a class="navbar-brand" href="admin_function.php">ALIMENTE</a>
+
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -107,13 +112,8 @@ else{
         </div>
       </li>
 
-
 		</ul>
 		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
-		
-		
-
-
 	</div>
 </nav>
 
@@ -174,15 +174,8 @@ else{
 			</table>
 			<?php 
 
-		}
-
-
-		
+		}		
 		?>
-
-
-
-
 
 		<div class="col-lg-6 delete">
 			<center><h2>For Delete item</h2></center>

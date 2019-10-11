@@ -9,11 +9,11 @@ if (isset($_POST['Login'])) {
 $email= $_POST['email_input'];
 $password= $_POST['password_input'];
 //echo $password;
-//$admin_detail=array($email,$password);
-//$_SESSION['admin_details']=$admin_detail;
+$admin_detail=array($email,$password);
+$_SESSION['admin_details']=$admin_detail;
 
-//$sql="select * from admin_info where email='$admin_detail[0]' AND password='$admin_detail[1]'";
-$sql="select * from admin_info where email='$email' AND password='$password'";
+$sql="select * from admin_info where email='$admin_detail[0]' AND password='$admin_detail[1]'";
+//$sql="select * from admin_info where email='$email' AND password='$password'";
 
 
 $command= mysqli_query($connection,$sql);
@@ -32,6 +32,8 @@ if ($row_number > 0 && $_SESSION['admin_login_status']!=1 ) {
 }
 
 }
+
+if(isset($_POST  )
 
     
 ?>

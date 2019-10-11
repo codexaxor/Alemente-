@@ -7,7 +7,7 @@ if (isset($_POST['Login'])) {
 $email= $_POST['email_input'];
 $password= $_POST['password_input'];
 
-//$user_detail=array($email,$password);
+$user_detail=array($email,$password);
 //$_SESSION['user_details']=$user_detail;
 
 //print_r(user_detail[0]);
