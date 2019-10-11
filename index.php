@@ -4,10 +4,13 @@ session_start();
 
 
 
+
+
 if (isset($_POST['Login'])) {
 
 $email= $_POST['email_input'];
-$password= md5($_POST['password_input']);
+$password= $_POST['password_input'];
+
 $user_detail=array($email,$password);
 $_SESSION['user_details']=$user_detail;
 
@@ -15,6 +18,8 @@ $_SESSION['user_details']=$user_detail;
 $sql="select * from user_info where email='$user_detail[0]' AND password='$user_detail[1]'";
 $command= mysqli_query($connection,$sql);
 $row_number=mysqli_num_rows($command);
+
+
 if ($row_number==1 && $_SESSION['login_status']!=1 ) {
 	echo "Login Successful";
 	$_SESSION['login_status']=1;

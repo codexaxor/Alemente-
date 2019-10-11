@@ -1,24 +1,18 @@
 <?php 
 session_start();
-if ($_SESSION['admin_login_status']==1) {
+
+if ($_SESSION['admin_login_status'] == 1) {
 include 'connection.php';
   
-  if (isset($_POST['submit_delete'])) {
-			$id=$_POST['id_input'];
-			
+  
 
-			$query= "DELETE FROM item_information WHERE id=$id" ; 
-			$command= mysqli_query($connection,$query);
-			if (mysqli_query($connection,$query)) {
-				echo "Deleted";
-				header('Location:admin_function.php');
-				
-			}
-			else{
-				echo "failed";
-			}
-		}
-
+  
+if (isset($_POST['Logout']) ) {
+	unset($_SESSION['admin_details']);
+	$_SESSION['admin_login_status']=0;
+	header('Location: admin.php');
+}
+  
 
 		//for display item in table 
 
@@ -57,56 +51,6 @@ include 'connection.php';
 			}
 
 
-			//for Update item
-		if (isset($_POST['submit_update'])) {
-		$name=$_POST['name_input'];
-		$image=$_POST['image_input'];
-		$price=$_POST['price_input'];
-		$Catagory=$_POST['catagory_input'];
-		$id=$_POST['id_input'];
-
-
-		if ($_POST['update_by']==0) {
-			$query = "update item_information set Name='$name' where id=$id" ;
-		} else if ($_POST['update_by']==1) {
-			$query = "update item_information set Price=$price where id=$id" ;
-		} else if($_POST['update_by']==2) {
-			$query = "update item_information set Image='$image' where id=$id" ;
-		}elseif ($_POST['update_by']==3) {
-			$query = "update item_information set Catagory='$Catagory' where id=$id" ;
-		}
-		else if($_POST['update_by']==4) {
-			$query = "update item set name='$name',image='$image',price=$price where id=$id" ;
-		}
-
-		$command= mysqli_query($connection,$query);
-		if (mysqli_query($connection,$query)) {
-			echo "updated";
-			header('Location:admin_function.php');
-			
-		}
-		else{
-			echo "failed";
-		}
-
-
-
-	}
-
-
-	//new user 
-	if (isset($_POST['submit'])) {
-	
-	$_SESSION['name']= $_POST['name_input'];
-	$_SESSION['phone_no']= $_POST['phone_input'];
-	$_SESSION['address']= $_POST['address_input'];
-	$_SESSION['gender']= $_POST['gender_input'];
-	$_SESSION['email']= $_POST['email_input'];
-	$_SESSION['password']= md5($_POST['password_input']);
-
-	header('Location: info_display _admin.php');
-
-	}
 }
 else{
 	echo '<script language="javascript">';
@@ -141,7 +85,7 @@ else{
 <body>
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-	<a class="navbar-brand" href="admin_function.php">ChalDalDotCom</a>
+	<a class="navbar-brand" href="admin_function.php">ALIMENTE</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -156,18 +100,17 @@ else{
           More
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="personal_info _admin.php">Profile</a>
-          <a class="dropdown-item" href="update.php">Update</a>
-          <a class="dropdown-item" href="#">Sales</a>
+          <a class="dropdown-item" href="personal_info _admin.php">My Profile</a>
+          <a class="dropdown-item" href="update.php">Update Product</a>
+        
         </div>
       </li>
 
-
 		</ul>
-		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
 		
-		
-
+		<form class="form-inline my-2 my-lg-0" method="POST" >
+				<button class="btn btn-outline-success my-2 my-sm-0" name="Logout" type="submit">Logout</button>
+		</form>
 
 	</div>
 </nav>
@@ -235,10 +178,13 @@ else{
 		?>
 
 
-
+	<!-- product ADD -->
+	
+	
 	<div class="row">
 		<div class="col-lg-6 add">
-			<center><h2>For ADD NEW item</h2></center>
+			<center><h1>ADD NEW ITEM</h1></center>
+			
 			<form method="POST">
 			<label for="EmailInput">Name</label>
 			<input type="text" class="form-control"  name="name_input">
@@ -248,137 +194,15 @@ else{
 			<input type="number" class="form-control"  name="price_input">
 			<label for="EmailInput">Catagory</label>
 			<input type="number" class="form-control"  name="catagory_input">
-			<button type="submit" name="submit_update" class="btn btn-primary">Submit</button>
+			
+			
+			
+			<button type="submit" name="submit_add" class="btn btn-primary">Submit</button>
 			</form>
 			
 
 		</div>
 	</div>
-
-	
-
-
-    <div class="modal fade" id="myModal" role="dialog">
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="container">
-							<div class="row">
-
-								<div class="col-lg-12">
-									<div class="modal-header">
-										<h4 class="modal-title">Sign Up</h4>
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-						
-						<div class="modal-body">
-							<form method="post"  >
-								<div class="container">
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="NameInput">Full Name</label>
-												<input type="text" class="form-control" id="name_input" name="name_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="PhoneNoInput">Phone Number</label>
-												<input type="text" class="form-control" id="phone_number" name="phone_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="AddressInput">Address</label>
-												<input type="text" class="form-control" id="address_input" name="address_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-
-
-									<div class="row">
-										<div class="col-lg-12">
-											<label for="GenderInput">Gender</label>
-											<select class="custom-select" name="gender_input">
-												<option selected>Gender</option>
-												<option value="1">Male</option>
-												<option value="2">Female</option>
-
-											</select>
-										</div>
-									</div>
-
-
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="EmailInput">Email address</label>
-												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email
-												" name="email_input">
-												<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-											</div>
-
-
-										</div>
-
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="PasswordInput">Password</label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password_input">
-											</div>
-
-										</div>
-
-									</div>
-
-
-
-
-
-
-									
-									<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-
-								</div>
-
-
-							</form>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-			
-	
-	
 
 </body>
 </html>

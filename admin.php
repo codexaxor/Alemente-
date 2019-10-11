@@ -31,11 +31,7 @@ if ($row_number > 0 && $_SESSION['admin_login_status']!=1 ) {
     echo '</script>';
 }
 
-}
-
-if(isset($_POST  )
-
-    
+}    
 ?>
 
 
