@@ -42,7 +42,7 @@ if ($row_number > 0 && $_SESSION['admin_login_status']!=1 ) {
 </head>
     <body>
     <div class="login-box">
-    <img src="images/avatar.png" class="avatar">
+    <img src="images/su.png" class="avatar">
         <h1>Login Here</h1>
             <form method="post">
             <p>Admin Name</p>
@@ -53,8 +53,10 @@ if ($row_number > 0 && $_SESSION['admin_login_status']!=1 ) {
              
             </form>
         
-        
-        </div>
+    <form action="admin_signup.php">
+    <input type="submit" value="Signup" />
+	</form>    
+    </div>
     
     </body>
 </html>

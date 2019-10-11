@@ -115,7 +115,7 @@ else{
 	</div>
 </nav>
 
-		<center><h2>For Showing item</h2></center>
+		<center><h1>DISPLAY ALL DATA</h1></center>
 	<div class="row">
 		<div class="col-lg-6">
 						
