@@ -1,0 +1,28 @@
+
+====================================== product input =======================
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('1', 'khichuri', '200', '1', 'iamges/b/b1.png', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('2', 'chiken biriyani', '400', '1', 'iamges/b/b2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('3', 'damplings', '200', '2', 'iamges/c/c1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('4', 'wo min', '300', '2', 'iamges/c/c2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('5', 'molotes', '400', '3', 'iamges/m/m1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('6', 'sopes', '500', '3', 'iamges/m/m2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('7', 'malai kofta', '900', '4', 'iamges/i/i1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('8', 'masala briyani', '600', '4', 'iamges/i/i2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('9', 'tom yum', '700', '5', 'iamges/t/t1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('10', 'khao kw', '600', '5', 'iamges/t/t2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('11', 'fanta', '100', '6', 'iamges/d/d1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('12', 'dew', '100', '6', 'iamges/d/d2.jpg', '0');
+
+
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('1', 'khichuri', '200', '1', 'b/b1.png', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('2', 'chiken biriyani', '400', '1', 'b/b2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('3', 'damplings', '200', '2', 'c/c1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('4', 'wo min', '300', '2', 'c/c2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('5', 'molotes', '400', '3', 'm/m1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('6', 'sopes', '500', '3', 'm/m2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('7', 'malai kofta', '900', '4', 'i/i1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('8', 'masala briyani', '600', '4', 'i/i2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('9', 'tom yum', '700', '5', 't/t1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('10', 'khao kw', '600', '5', 't/t2.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('11', 'fanta', '100', '6', 'd/d1.jpg', '0');
+INSERT INTO `item_information` (`Id`, `Name`, `Price`, `Catagory`, `Image`, `hot_item`) VALUES ('12', 'dew', '100', '6', 'd/d2.jpg', '0');

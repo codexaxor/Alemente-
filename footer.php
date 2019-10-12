@@ -28,56 +28,29 @@ include 'connection.php';
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <body>
-	<div class="footer-body">
-		<div class="footer-start">
-			<div class="row">
 
-				<div class="col-lg-3">
-					<p><b>ALIMENTE</b></p>
-					<p>2019</p>
-					
-				</div>
-				<div class="col-lg-3">
-					<p><strong><b>Home</b></strong></p>
-					<p><span><b>About US</b></span></p>
-					<p><b>Projects</b></p>
-					
-				</div>
-
-				<div class="col-lg-3">
-					<p><strong><b>Visit</b></strong></p>
-					<p>141 & 142, Love Road, Tejgaon Industrial Area, Dhaka-1208</p>
-					
-				</div>
-
-				<div class="col-lg-3">
-					<p><strong><b>Legal</b></strong></p>
-					<p>Terms</p>
-					<p>Privacy</p>
-					
-				</div>
-				
-
+<footer>
+	<div class="container py-3 py-md-4">
+		<div class="row">
+			<div class="col-lg-5 col-md-12">
+				<p class="py-lg-4">© ID: 17.01.04.009 &  ID: 17.01.04.025</p>
 			</div>
-			<div class="row">
-				<div class="col-lg-3">
-					<p><B>Follow us:</B></p>
-					
-				</div>
-				<div class="col-lg-3">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>			
-				</div>
-				
+			<div class="col-lg-2 col-md-12 logo text-center">
+				<a href="index.html">ALIMENTE</a>
 			</div>
 
-			<div class="copy_right">
-				<p id="copy_right_p">&copy;2019  ID: 17.01.04.009 &  ID: 17.01.04.025</p>
+			<div class="col-lg-5 col-md-12">
+				<ul class="py-lg-4">
+				<li class="mx-2"><a href="about.php">ABOUT US</a></li>
+				<li class="mx-2"><a href="contact.php">CONTACT US</a></li>
+				</ul>
 			</div>
-			
+
 		</div>
-		
 	</div>
+</footer>
+
+
 
 </body>
 </html>

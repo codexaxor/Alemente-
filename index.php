@@ -3,9 +3,6 @@ include 'connection.php';
 session_start();
 
 
-
-
-
 if (isset($_POST['Login'])) {
 
 $email= $_POST['email_input'];
@@ -33,6 +30,8 @@ if ($row_number==1 && $_SESSION['login_status']!=1 ) {
 }
 
 }
+
+
 if (isset($_POST['submit'])) {
 	
 	$_SESSION['name']= $_POST['name_input'];
@@ -100,15 +99,52 @@ if (isset($_POST['submit'])) {
 	 ?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>ALIMENTE</title>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- Latest compiled and minified CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cafe In Restaurant Category Flat Bootstrap Responsive Website Template | Home :: W3layouts</title>
+  
+  <!-- Meta tag Keywords -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Cafe In Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+
+
+    <!-- hide URLS in mobile DEVICES -->
+
+
+  <script type="application/x-javascript">
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+
+
+  </script>
+
+
+  <!--// Meta tag Keywords -->
+  
+  <!-- css files -->
+  <link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+  <link rel="stylesheet" href="css/fontawesome-all.css"> <!-- Font-Awesome-Icons-CSS -->
+  <!-- //css files -->
+
+  <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+
+  <!-- web-fonts -->
+  <link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+  <!-- //web-fonts -->
+  
+
+  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -126,483 +162,259 @@ if (isset($_POST['submit'])) {
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+
+
+
 </head>
+
+
+
+<!-- BODY TAG STARTED -->
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-	<a class="navbar-brand" href="#">ALIMENTE</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
 
-	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			<li class="nav-item active">
-				<a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          More
-        </a>
+<?php include 'navigate.php'; ?>
+
+      <!-- sliding image -->
+
+
+  <div class="slider">
+  	<br><br><br><br><br>
+    <figure>
+
+      <div class="slide s1">
+        <p class="p_slide">FIRST TIME IN BANGLADESH</p>
+	  </div>
+	  <div class="slide s2">
+        <p class="p_slide">NEW HOT PRODUCTS</p>
+	  </div>
+
+	  <div class="slide s3">
+        <p class="p_slide">DELIVERY ACCROSS THE COUNTERY</p>
+	  </div>
+
+	  <div class="slide s4">
+        <p class="p_slide">JOIN TODAY FOR EXCLUSIVE EXPERIMENTS</p>
+	  </div>
+
+    </figure>
+
+
+  
+</div>
+
+
+
+<section class="about py-5">
+		<br><br>
+
+	<div class="container">
+		<h3 class="heading text-center text-uppercase mb-5"> Let us Introduce ourselves </h3>
+		<p class="aboutpara text-center">Maecenas ac euismod eros. Aliquam a suscipit nibh. Aliquam iaculis erat porta mauris fermentum lacinia. Donec posuere a massa sit amet sagittis. Nam ut nulla a ligula dictum imperdiet nec ut mauris. Etiam ipsum ipsum, ultrices id nisi ac, pretium efficitur ex. Vestibulum a maximus magna, sit amet ultrices nisi. In laoreet placerat turpis.</p>
 		
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="personal_info.php">Profile</a>
-          <a class="dropdown-item" href="orderdetail.php">Orders</a>
-		  <a class="dropdown-item" href="contact_us.php">Contact Us</a>
-		  <a class="dropdown-item" href="contact_us.php">About Us</a>
+		<div class="row about_grids mt-5">
+			<div class="col-md-4">
+				<img src="images/about1.jpg" alt="" class="img-fluid" />
+				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
+				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
+				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+			</div>
+			<div class="col-md-4 mt-md-0 mt-4">
+				<img src="images/about2.jpg" alt="" class="img-fluid" />
+				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
+				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
+				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+			</div>
+			<div class="col-md-4 mt-md-0 mt-4">
+				<img src="images/about3.jpg" alt="" class="img-fluid" />
+				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
+				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
+				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+
+
+<!-- /stats -->
+<section class="stats_test pb-5 container-fluid">
+	<div class="row inner_stat_wthree_agileits">
+		<div class="col-sm-3 col-6 py-5 stats_left counter_grid">
+			<i class="far fa-building"></i>
+			<p class="counter">100</p>
+			<h4>Branches</h4>
+		</div>
+		<div class="col-sm-3 col-6 py-5 stats_left counter_grid1">
+			<i class="fas fa-users"></i>
+			<p class="counter">15</p>
+			<h4>Qualified Chefs</h4>
+		</div>
+		<div class="col-sm-3 col-6 py-5 stats_left counter_grid2">
+			<i class="far fa-edit"></i>
+			<p class="counter">793</p>
+			<h4>Food Items</h4>
+		</div>
+		<div class="col-sm-3 col-6 py-5 stats_left counter_grid3">
+			<i class="far fa-smile"></i>
+			<p class="counter">4045</p>
+			<h4>Happy Customers</h4>
+		</div>
+	</div>
+</section>
+<!-- //stats -->
+
+
+
         </div>
-      </li>
+      </div>
 
+    </div>
 
-		</ul>
-		<form class="form-inline my-2 my-lg-0" id="search">
-			<input class="form-control mr-lg-4" type="search" placeholder="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-
-
-		</form>
-		
-		<form class="form-inline my-2 my-lg-0"  method="POST">
-			<input class="form-control mr-sm-2" type="User Name" name="email_input" placeholder="User Name">
-			<input class="form-control mr-sm-2" type="password" name="password_input" placeholder="Password">
-			<button class="btn btn-outline-success my-2 my-sm-0" name="Login" type="submit">Login</button>
-
-
-		</form>
-
-		<a class="navbar-brand" href="cart_view.php">
-           <img src="images/cart.png" class="cart_image" width="30" height="30" >
-        </a>
+  </div>
 
 
 
-	</div>
-</nav>
+</div>
 
 
-			<!-- sliding image -->
+
+</div>
 
 
-	<div class="slider">
-		<figure>
-
-			<div class="slide s1">
-				<p class="p_slide">Groceries delivered in 1 hour</p>
 
 
-			</div>
-			<div class="slide s2">
-				<img src="images/slider1.jpg" class="img-fluid" alt="Responsive image">
 
 
-			</div>
-			<div class="slide s3">
-				<img src="images/slider3.jpg" class="img-fluid" alt="Responsive image">
 
 
-			</div>
-			<div class="slide s4">
-				<img src="images/slider4.png" class="img-fluid" alt="Responsive image">
 
 
-			</div>
-
-		</figure>
 
 
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-uppercase" id="exampleModalLongTitle">Cafe In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<img src="images/4.jpg" class="img-fluid mb-3" alt="cafe Image" />
+        Vivamus eget est in odio tempor interdum. Mauris maximus fermentum arcu, ac finibus ante. Sed mattis risus at ipsum elementum, ut auctor turpis cursus. Sed sed odio pharetra, aliquet velit cursus, vehicula enim. Mauris porta aliquet magna, eget laoreet ligula.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+
+
+
+
+
+
+
+<!------------------ ALL JAVASCRIPTS INCLUDE -------------->
+
+
+<!-- js-scripts -->		
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<!-- //js -->	
 	
-</div>
-
-<div class="container menu_div">
-	<div class="row">
-
-		<div class="col-lg-3 border col_one">
-
-			<a href="Vegetables.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/v1.jpg" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Vegetables</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-
-
-		</div>
-		<div class="col-lg-3 border col_two">
-			<a href="Fruits.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/fruits.png" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Fruits</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-		</div>
-		<div class="col-lg-3 border col_three">
-			<a href="Groceries.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize ">
-						<img src="images/groceries.png" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Groceries</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-		</div>
-
-	</div>
-	<div class="row">
-		<div class="col-lg-3 border col_four">
-			<a href="Household.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/household.png" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Household</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-		</div>
-		<div class="col-lg-3 border col_five">
-			<a href="Baby_care.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/baby_care.png" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Baby Care</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-		</div>
-		<div class="col-lg-3 border col_six">
-			<a href="other.php">
-				<div class="row">
-
-					<div class="col-lg-6 col-sm-6 resize">
-						<img src="images/other.png" class="img-responsive">
-
-
-					</div>
-					<div class="col-lg-6 col-sm-6 resize">
-						<p>Other</p>
-						<p>Buy Now</p>
-
-					</div>
-
-				</div>
-
-
-			</a>
-
-		</div>
-
-	</div>
-</div>
-
-<div class="container join_now">
-	<div class="row join_now_row">
-		<div class="col-lg-6 ">
-
-			<p class="join_now_p">
-				Need an Account?
-			</p>
-		</div>
-		<div class="col-lg-6">
-
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
-			<div class="modal fade" id="myModal" role="dialog">
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="container">
-							<div class="row">
-
-								<div class="col-lg-12">
-									<div class="modal-header">
-										<h4 class="modal-title">Sign Up</h4>
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-						
-						<div class="modal-body">
-							<form method="post"  >
-								<div class="container">
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="NameInput">Full Name</label>
-												<input type="text" class="form-control" id="name_input" name="name_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="PhoneNoInput">Phone Number</label>
-												<input type="text" class="form-control" id="phone_number" name="phone_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="AddressInput">Address</label>
-												<input type="text" class="form-control" id="address_input" name="address_input">
-
-											</div>
-
-
-										</div>
-
-									</div>
-
-
-									<div class="row">
-										<div class="col-lg-12">
-											<label for="GenderInput">Gender</label>
-											<select class="custom-select" name="gender_input">
-												<option selected>Gender</option>
-												<option value="1">Male</option>
-												<option value="2">Female</option>
-
-											</select>
-										</div>
-									</div>
-
-
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="EmailInput">Email address</label>
-												<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email
-												" name="email_input">
-												<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-											</div>
-
-
-										</div>
-
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="form-group">
-												<label for="PasswordInput">Password</label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password_input">
-											</div>
-
-										</div>
-
-									</div>
-									
-									<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-
-								</div>
-
-
-							</form>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-
-	</div>
-
-
-
-</div>
-
-
-
-</div>
-<center> 
-<h1 class="fire"> <i class="fas fa-fire"></i> HOT DEALS <i class="fas fa-fire"></i></h1>
-
-
-</center>
-
-
-<div class="container">
-		<?php 
+	<!-- Banner Responsive slider -->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 3
+			$("#slider3").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- // Banner Responsive slider -->
 	
-		$query = "select * from item_information where hot_item=1 order by Id ASC" ;
+	<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
 	
+	<!-- search-bar -->
+	<script src="js/main.js"></script>
+	<!-- //search-bar -->
+	
+	<!-- start-smoth-scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
 
-	$command= mysqli_query($connection,$query);
-	$row_number=mysqli_num_rows($command);
-	?>
-	<div class="row">
-		<?php  
-		if ($row_number>0) {
-			while ($item =mysqli_fetch_array($command)) {
-				
-				
-				?>
+	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 
-				<div class="col-lg-4 box">
-					<form method="post" >
-						<h6 class="card-title"><?php echo $item['Name'] ?></h6>
-						<div class="card-body">
-							<img src="images/<?php echo $item['Image']  ?>" class="img-fluid image rounded-circle">
-							<h2 class="item-price">Price: <?php echo $item['Price'] ?></h2>
-							
-							<input type="hidden" name="hidden_Id" value="<?php echo $item["Id"]; ?>"/>
-							<input type="hidden" name="hidden_name" value="<?php echo $item["Name"]; ?>"/>
-							<input type="hidden" name="hidden_price" value="<?php echo $item["Price"]; ?>"/>
-							
-							<input type="text" class="form-control" name="ammount" value="1" />
-							<input type="submit" name="add_to_cart" class="btn btn-success" value="Add to Cart"/>
-							
-						</div>
-						
-					</form>
-					
-					
-				</div>
-
-				<?php
-			}
-			?>
-		</div>
-		<?php  
-
-	}
-
-	?>
-
-	</div>
-
-
+<!-- //js-scripts -->
 
 </body>
 
-<div class="footer-body">
-
-		<div class="footer-start">
-		
-			<div class="row">
-
-				<div class="col-lg-4">
-					<p><b>ALIMENTE</b></p>
-					<p>&copy;2019</p>
-					
-				</div>
-
-				<div class="col-lg-4">
-					<p><strong><b>Visit</b></strong></p>
-					<p>141 & 142, Love Road, Tejgaon Industrial Area, Dhaka-1208</p>
-					
-				</div>
-
-				<div class="col-lg-4">
-					<p><strong><b>Legal</b></strong></p>
-					<p>Terms</p>
-					<p>Privacy</p>
-					
-				</div>
-				
-
-			</div>
-			
-			<div class="row">
-				<div class="col-lg-4">
-					<B>Follow us : </B>
-				
-		<!--		<div class="col-lg-6 icon">  -->
-		
-		
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-			
-				</div>
-				
-			</div>
-
-			<div class="copy_right">
-				<p id="copy_right_p">&copy;2019 16.02.04.099 & 16.02.04.110,All Rights Reserved</p>
-			</div>
-			
-		</div>
-		
-</div>
-
+<?php include 'footer.php'; ?>
 
 
 </html>
-
-
-
-
