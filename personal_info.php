@@ -154,7 +154,8 @@ if (isset($_POST['update_contact'])) {
 					
 						<h1 class="card-title"><?php echo $user['name'] ?></h1>
 						<div class="card-body">
-							
+						
+							<h1 class="item-price">Name:<?php echo $user['name'] ?></h1>
 							<h2 class="item-price">Delivery Address: <?php echo $user['address'] ?></h2>
 							<h2 class="item-price">Contact number: <?php echo $user['phone_no'] ?></h2>
 							<h2 class="item-price">Gender: <?php echo $user['gender'] ?></h2>
