@@ -3,9 +3,14 @@
 
 }
 body{
-	background: linear-gradient(100deg,#ff1a1a,#ffbf80);
+
+	background: linear-gradient(#99ffd6,#99ffd6);
 }
 .btn{
 	margin-right: 20px;
 	margin-top: 10px;
+}
+
+.card-body{
+	margin: 20px 30px;
 }

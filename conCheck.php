@@ -20,6 +20,8 @@
 		while($row = mysqli_fetch_assoc($res)){
 			echo $row['email']."<br>";
 		}
+
+		echo $dbname;
 	}
 	else{
 		echo "error";

@@ -2,7 +2,7 @@
 include 'connection.php';
 session_start();
 
-
+/*
 
 if (isset($_POST['signin'])) {
 
@@ -10,7 +10,7 @@ if (isset($_POST['signin'])) {
 		$password= $_POST['password'];
 
         $user_detail=array($email,$password);
-        $_SESSION['user_details']=$user_detail;
+       // $_SESSION['user_details']=$user_detail;
 
 
 		$sql="select * from user_info where email='$user_detail[0]' AND password='$user_detail[1]'";
@@ -20,8 +20,9 @@ if (isset($_POST['signin'])) {
         $row_number=mysqli_num_rows($command);
 		
 
-        if ($row_number > 0 && $_SESSION['user_login_status']!=1 ) {
+        if ($row_number == 1 && $_SESSION['user_login_status'] !=1 ) {
         echo "Login Successful";
+		$_SESSION['user_details']=$user_detail;
         $_SESSION['user_login_status']=1;
         header('Location: personal_info.php');
         } 
@@ -31,7 +32,62 @@ if (isset($_POST['signin'])) {
         echo '</script>';
         }
 
-    }    
+    }
+*/
+
+
+/*
+if (isset($_POST['signin'])) {
+
+    $username=$_POST['email'];
+    $password=$_POST['password'];
+
+
+    $query = "SELECT * FROM user_info  WHERE email='$username' AND password='$password'";
+    $results = mysqli_query($connection, $query);
+
+    $row = mysqli_num_rows($results);
+
+    if ($row == 1) {
+            $_SESSION['email'] = $username;
+            //$_SESSION['user_login_status']=1;
+            header('location: personal_info.php');
+    }else {
+            echo '<script language="javascript">';
+            echo 'alert("Wrong adminName & Password Combination")';
+            echo '</script>';
+            header('location: user_signin.php');
+    }
+
+}
+
+*/
+
+if (isset($_POST['signin'])) {
+
+    $username=$_POST['email'];
+    $password=$_POST['password'];
+
+
+    $query = "SELECT * FROM user_info  WHERE email='$username' AND password='$password'";
+    $results = mysqli_query($connection, $query);
+
+
+    if (mysqli_num_rows($results) == 1) {
+            $_SESSION['email'] = $username;
+            //$_SESSION['user_login_status']=1;
+            header('location: personal_info.php');
+    }else {
+            echo '<script language="javascript">';
+            echo 'alert("Wrong adminName & Password Combination")';
+            echo '</script>';
+    }
+
+}
+
+
+
+
 ?>
 
 
@@ -49,6 +105,8 @@ if (isset($_POST['signin'])) {
     <!-- Title Page-->
     <title>SIGN IN</title>
 
+
+
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -64,6 +122,9 @@ if (isset($_POST['signin'])) {
 </head>
 
 <body>
+
+
+
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
@@ -90,7 +151,7 @@ if (isset($_POST['signin'])) {
 
                 </div>
 
-                                    <form action="user_signup.php">
+    <form action="user_signup.php">
     <input type="submit" value="Signup" />
     </form> 
 
@@ -108,7 +169,8 @@ if (isset($_POST['signin'])) {
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
+
+
 
 </html>
-<!-- end document-->
