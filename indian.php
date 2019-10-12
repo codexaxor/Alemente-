@@ -8,7 +8,7 @@
 <html>
 <head>
 
-	<title>bangla foods</title>
+	<title>indian foods</title>
 
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">

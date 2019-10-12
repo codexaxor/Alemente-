@@ -36,7 +36,7 @@ include 'connection.php';
 				<p class="py-lg-4">© ID: 17.01.04.009 &  ID: 17.01.04.025</p>
 			</div>
 			<div class="col-lg-2 col-md-12 logo text-center">
-				<a href="index.html">ALIMENTE</a>
+				<a href="index.php">ALIMENTE</a>
 			</div>
 
 			<div class="col-lg-5 col-md-12">

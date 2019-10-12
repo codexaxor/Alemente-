@@ -245,14 +245,6 @@ if (isset($_POST['update_information'])) {
 
 				</div>
 			</div>
-
 		</div>
-
-
-
-	
-	
-
-
 </body>
 </html>
