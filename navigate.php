@@ -59,12 +59,15 @@ include 'connection.php';
 
                         <!-- user list -->
             <li class="dropdown nav-item">
-              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">PROFILE 
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Pages
                 <b class="caret"></b>
               </a>
               <ul class="dropdown-menu agile_short_dropdown">
                 <li>
                   <a href="personal_info.php">my Profile</a>
+                </li>
+                <li>
+                  <a href="special.php">Special Dishes</a>
                 </li>
                 <li>
                   <a href="cart_view.php">my Cart</a>

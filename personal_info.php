@@ -7,7 +7,7 @@ session_start();
 if ($_SESSION['user_login_status']==1) {
 
 
-		include 'userNavigate.php';
+		include 'navigate.php';
 
 		$user_detail=$_SESSION['email'];
 		$sql="select * from user_info where email='$user_detail'";
