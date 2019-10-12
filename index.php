@@ -185,7 +185,7 @@ if (isset($_POST['submit'])) {
   	<br><br><br><br><br>
     <figure>
 
-      <div class="slide s1">
+      <div class="slide s5">
         <p class="p_slide">FIRST TIME IN BANGLADESH</p>
 	  </div>
 	  <div class="slide s2">

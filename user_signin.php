@@ -130,7 +130,7 @@ if (isset($_POST['signin'])) {
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">WELL COME</h2>
+                    <h2 class="title">USER SIGN IN</h2>
                     <form method="POST">
                         
                         <!-- email -->
@@ -149,11 +149,15 @@ if (isset($_POST['signin'])) {
                         </div>
                     </form>
 
-                </div>
+                <div class="col-sm-2 col-sm-2">
+                    <br><br><br>
+                    <form action="user_signup.php">
+                    <input type="submit" class="btn btn--radius btn--green" value="Signup" />
+                    </form> 
 
-    <form action="user_signup.php">
-    <input type="submit" value="Signup" />
-    </form> 
+                </div>
+            </div>
+
 
             </div>
         </div>
