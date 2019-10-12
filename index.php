@@ -3,6 +3,14 @@ include 'connection.php';
 session_start();
 
 
+
+// if ($_SESSION['user_login_status']==1) {
+// 	include 'userNavigate.php';
+// }
+// else{
+// 	include 'navigate.php';	
+// }
+
 if (isset($_POST['Login'])) {
 
 $email= $_POST['email_input'];
@@ -174,7 +182,6 @@ if (isset($_POST['submit'])) {
 <!-- BODY TAG STARTED -->
 
 <body>
-
 
 <?php include 'navigate.php'; ?>
 

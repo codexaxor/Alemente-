@@ -80,9 +80,10 @@ include 'connection.php';
 
 
 }
+
 else{
 	echo '<script language="javascript">';
-			echo 'alert("Please Login")';
+			echo 'alert("You dont Have Permission to do this")';
 			echo '</script>';
 			header('Location: admin.php');
 }

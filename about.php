@@ -133,16 +133,6 @@ session_start();
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!------------------ ALL JAVASCRIPTS INCLUDE -------------->
 
 

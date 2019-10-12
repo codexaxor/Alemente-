@@ -57,39 +57,29 @@ include 'connection.php';
               </ul>
             </li>
 
-            <!--
-
-            <li class="nav-item">
-              <a class="nav-link" href="Baby_care.php">ABOUT US</a>
+                        <!-- user list -->
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">PROFILE 
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu agile_short_dropdown">
+                <li>
+                  <a href="personal_info.php">my Profile</a>
+                </li>
+                <li>
+                  <a href="cart_view.php">my Cart</a>
+                </li>
+              </ul>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">CONTACT</a>
-            </li>
-
-        -->
 
             <li class="nav-item">
               <a class="nav-link" href="user_signin.php">SIGN IN / SIGN UP</a>
             </li>
            
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">LOGOUT</a>
+            </li>
 
-
-            <!-- search -->
-            <div class="search-bar-agileits">
-              <div class="cd-main-header">
-                <ul class="cd-header-buttons">
-                  <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
-                </ul>
-                <!-- cd-header-buttons -->
-              </div>
-              <div id="cd-search" class="cd-search">
-                <form action="#" method="post">
-                  <input name="Search" type="search" placeholder="Click enter after typing...">
-                </form>
-              </div>
-            </div>
-            <!-- search --->
         
           </ul>
           
