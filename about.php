@@ -75,6 +75,61 @@ session_start();
 
 
 
+<!--Team-->
+<section class="Team py-5">
+	<div class="container">
+	<h3 class="heading text-center text-uppercase mb-5"> This Project is Developed By </h3>
+		<div class="row inner-sec-w3layouts-agileinfo">
+
+
+			<div class="col-lg-6 team-grids">
+				<img src="images/123/sajal.jpg" class="img-responsive" alt="">
+				<div class="team-info">
+					<div class="caption">
+						<h4>MD. Abu Yousuf Sajal</h4>
+						<h6>ID : 17.01.04.025</h6>
+					</div>
+					<div class="social-icons-section">
+						<a class="fac" href="#">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a class="twitter" href="#">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+						<a class="pinterest" href="#">
+							<i class="fab fa-pinterest"></i>
+						</a>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-6  team-grids">
+				<img src="images/123/sadman.jpg" class="img-responsive" alt="">
+				<div class="team-info">
+					<div class="caption">
+						<h4>Sadman Fahim</h4>
+						<h6>ID : 17.01.04.009</h6>
+					</div>
+					<div class="social-icons-section">
+						<a class="fac" href="#">
+							<i class="fab fa-facebook"></i>
+						</a>
+						<a class="twitter" href="#">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+						<a class="pinterest" href="#">
+							<i class="fab fa-pinterest"></i>
+						</a>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!--//Team-->
 
 
 
