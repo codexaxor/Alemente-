@@ -3,7 +3,7 @@
 $dbServer = "localhost";
 $dbUser = "root";
 $dbPass = "";
-$dbName = "chal_dal";
+$dbName = "alimente";
 
 
 //$connection =mysqli_connect('localhost','root');
