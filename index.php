@@ -181,7 +181,7 @@ if (isset($_POST['submit'])) {
       <!-- sliding image -->
 
 
-  <div class="slider">
+  <div class="slider  col-md-12 d-none d-sm-block">
   	<br><br><br><br><br>
     <figure>
 
@@ -213,26 +213,26 @@ if (isset($_POST['submit'])) {
 
 	<div class="container">
 		<h3 class="heading text-center text-uppercase mb-5"> Let us Introduce ourselves </h3>
-		<p class="aboutpara text-center">Maecenas ac euismod eros. Aliquam a suscipit nibh. Aliquam iaculis erat porta mauris fermentum lacinia. Donec posuere a massa sit amet sagittis. Nam ut nulla a ligula dictum imperdiet nec ut mauris. Etiam ipsum ipsum, ultrices id nisi ac, pretium efficitur ex. Vestibulum a maximus magna, sit amet ultrices nisi. In laoreet placerat turpis.</p>
+		<p class="aboutpara text-center"> As the bustling capital of Bangladesh, it's no wonder that Dhaka's culinary scene is something special. This cultural hub offers plenty in the way of delicious dishes, from authentic Bangladesh recipes perfected over generations, to fabulous fusion dishes that bring together the best flavours and ingredients from across southern Asia and beyond. With foodpanda, you've easy access to this diverse dining scene, with straightforward online ordering and express delivery so you can enjoy eating in style without breaking a sweat. Whether it's a brilliant brunch or last-minute lunch, mouth-watering dinner or late-night feast, you've plenty to pick from in Dhaka.</p>
 		
 		<div class="row about_grids mt-5">
 			<div class="col-md-4">
 				<img src="images/about1.jpg" alt="" class="img-fluid" />
 				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
 				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
-				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+			
 			</div>
 			<div class="col-md-4 mt-md-0 mt-4">
 				<img src="images/about2.jpg" alt="" class="img-fluid" />
 				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
 				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
-				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+			
 			</div>
 			<div class="col-md-4 mt-md-0 mt-4">
 				<img src="images/about3.jpg" alt="" class="img-fluid" />
 				<h3 class="mt-3 my-2 text-capitalize">Aliquam iaculis erat porta </h3>
 				<p class="mb-2">Nam ut nulla a ligula dictum imperdiet nec</p>
-				<a href="#" class="text-capitalize">Read more <span class="fas fa-long-arrow-alt-right"></span></a>
+	
 			</div>
 		</div>
 		
